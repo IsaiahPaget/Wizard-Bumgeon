@@ -9,6 +9,10 @@ public class FollowPlayer : MonoBehaviour
    public float movementSpeed;
    public Rigidbody2D rb;
 
+   void start() {
+    print("hello world!");
+   }
+
     // Update is called once per frame
     void FixedUpdate()
     {
