@@ -20,6 +20,7 @@ public class FireBall : MonoBehaviour
     }
 
     void OnTriggerEnter2D (Collider2D hitInfo) {
+        FindAnyObjectByType<AudioManager>().Play("fireball_explosion");
         animator.SetBool("fireballCollided", true);
         rb.velocity = transform.up * 0;
         Invoke("DestroyFireBallPrefab", destroyDelay);
