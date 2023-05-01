@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 6830790221707580481}
   - component: {fileID: 5880587509124004433}
   - component: {fileID: 5699547083823774686}
-  - component: {fileID: -6219958986600751927}
   - component: {fileID: 1467756106426527133}
+  - component: {fileID: 3359279978366161439}
+  - component: {fileID: 6422653205022070308}
   m_Layer: 6
   m_Name: FireBall
   m_TagString: FireBall
@@ -148,22 +149,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-6219958986600751927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3089357560499691699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cae5cc58d3a88db488bb2228d1ab1465, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  animator: {fileID: 5699547083823774686}
-  fireballCollider: {fileID: 5880587509124004433}
-  rb: {fileID: 6830790221707580481}
 --- !u!82 &1467756106426527133
 AudioSource:
   m_ObjectHideFlags: 0
@@ -260,6 +245,34 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3359279978366161439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3089357560499691699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db0661da86b0c87438fc6b1b46c7871e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 5699547083823774686}
+--- !u!114 &6422653205022070308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3089357560499691699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eae000f471fdc043846afdf991b14dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  animationManager: {fileID: 3359279978366161439}
+  rb: {fileID: 6830790221707580481}
 --- !u!1 &8369512603292657654
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,22 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireBallShoot : MonoBehaviour
+public class SpellCast : MonoBehaviour
 {
     // A reference to the camera used to get the mouse position
-    public Camera cam;
+    [SerializeField]
+    Camera cam;
     // The point on the player where the fireball will spawn
-    public Transform FirePoint;
+    [SerializeField]
+    Transform FirePoint;
     // The prefab for the fireball
-    public GameObject FireBallPrefab;
+    [SerializeField]
+    GameObject spellPrefab;
     // The position of the mouse in the world
+    [SerializeField]
+    InputManager inputManager;
     Vector3 mousePosition;
     // The direction in which the fireball will be shot
     Vector2 shootDirection;
     // The angle at which the fireball will be shot
     float shootAngle;
     // The rotation of the fireball
-    Quaternion FireballRotation;
+    Quaternion SpellRotation;
 
     // Update is called once per frame
     void Update()
@@ -29,10 +34,10 @@ public class FireBallShoot : MonoBehaviour
         // Calculate the angle at which the fireball should be shot
         shootAngle = Mathf.Atan2(shootDirection.y, shootDirection.x) * Mathf.Rad2Deg - 90f;
         // Create a rotation for the fireball based on the shoot angle
-        FireballRotation = Quaternion.Euler(0, 0, shootAngle);
+        SpellRotation = Quaternion.Euler(0, 0, shootAngle);
 
         // If the player clicks the left mouse button...
-        if (Input.GetButtonDown("Fire1")) {
+        if (inputManager.isSpellCasted()) {
             // ...shoot a fireball from the FirePoint with the calculated rotation
             Shoot();
         }
@@ -40,6 +45,6 @@ public class FireBallShoot : MonoBehaviour
 
     // Instantiate a fireball at the FirePoint with the calculated rotation
     void Shoot() {
-        Instantiate(FireBallPrefab, FirePoint.position, FireballRotation);
+        Instantiate(spellPrefab, FirePoint.position, SpellRotation);
     }
 }
