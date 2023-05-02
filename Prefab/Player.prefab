@@ -209,11 +209,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b2eef06f0a17e4d95060da04e52728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputManager: {fileID: 1132325202}
   playerController: {fileID: 0}
   maxHealth: 10
   invincibilityFrames: 1
-  rb: {fileID: 1610785176388895596}
   movementSpeed: 5
   healthBar: {fileID: 96648001}
 --- !u!114 &1132325210
@@ -228,8 +226,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f6a01fce2e7bf943923665f2ea8f316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1132325209}
-  animationManager: {fileID: 1132325211}
 --- !u!114 &1132325211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,7 +238,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db0661da86b0c87438fc6b1b46c7871e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1610785176388895592}
 --- !u!114 &1132325212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,7 +250,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dccb68b6f6c8954b8dc37fae6bc8340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1132325209}
 --- !u!114 &1132325214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,10 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8af1a64821b4a1d4a974b2ee59dd125a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  FirePoint: {fileID: 1610785175071889021}
-  spellPrefab: {fileID: 3089357560499691699, guid: 8ee0253e61840dd44aa3fb44252b361a, type: 3}
-  inputManager: {fileID: 1132325202}
+  fireball: {fileID: 6422653205022070308, guid: 8ee0253e61840dd44aa3fb44252b361a, type: 3}
 --- !u!1 &1610785176724024142
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,7 +521,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 118efede9c9f2be4a8fb00e23a954a85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 4257928765403876244}
 --- !u!114 &4257928765403876244 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5831633082357544761, guid: 4d79741dc006a664b818c51649b8c5e4, type: 3}

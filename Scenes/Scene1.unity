@@ -22898,6 +22898,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 1132325214, guid: b22e7f844e2fe8a44a9b81702578da4a, type: 3}
+      propertyPath: spells.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1610785176388895594, guid: b22e7f844e2fe8a44a9b81702578da4a, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -22963,6 +22967,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2259096940968107952, guid: 87956febcd2f4154d88082cb384dc7b0, type: 3}
+      propertyPath: sounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2259096940968107952, guid: 87956febcd2f4154d88082cb384dc7b0, type: 3}
+      propertyPath: sounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: a1219f7438c2489428d80011c0281715, type: 3}
+    - target: {fileID: 2259096940968107952, guid: 87956febcd2f4154d88082cb384dc7b0, type: 3}
+      propertyPath: sounds.Array.data[0].name
+      value: fireBallExplosion
+      objectReference: {fileID: 0}
+    - target: {fileID: 2259096940968107952, guid: 87956febcd2f4154d88082cb384dc7b0, type: 3}
+      propertyPath: sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 034abb7d69e537645b03071914dfe0b2, type: 3}
+    - target: {fileID: 2259096940968107952, guid: 87956febcd2f4154d88082cb384dc7b0, type: 3}
+      propertyPath: sounds.Array.data[2].name
+      value: Spell_Cast_FireBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 2259096940968107952, guid: 87956febcd2f4154d88082cb384dc7b0, type: 3}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 034abb7d69e537645b03071914dfe0b2, type: 3}
+    - target: {fileID: 2259096940968107952, guid: 87956febcd2f4154d88082cb384dc7b0, type: 3}
+      propertyPath: sounds.Array.data[3].name
+      value: Spell_Cast_FireBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 2259096940968107952, guid: 87956febcd2f4154d88082cb384dc7b0, type: 3}
+      propertyPath: sounds.Array.data[0].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2259096940968107952, guid: 87956febcd2f4154d88082cb384dc7b0, type: 3}
+      propertyPath: sounds.Array.data[1].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2259096940968107952, guid: 87956febcd2f4154d88082cb384dc7b0, type: 3}
+      propertyPath: sounds.Array.data[2].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2259096940968107952, guid: 87956febcd2f4154d88082cb384dc7b0, type: 3}
+      propertyPath: sounds.Array.data[3].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2259096940968107952, guid: 87956febcd2f4154d88082cb384dc7b0, type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2259096940968107952, guid: 87956febcd2f4154d88082cb384dc7b0, type: 3}
+      propertyPath: sounds.Array.data[3].volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2259096940968107955, guid: 87956febcd2f4154d88082cb384dc7b0, type: 3}
       propertyPath: m_RootOrder
       value: 0

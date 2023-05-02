@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField]
     InputManager inputManager;
     [SerializeField]
     PlayerController playerController;
@@ -19,15 +18,21 @@ public class Player : MonoBehaviour
     [SerializeField]
     int invincibilityFrames;
     
-    [SerializeField]
     Rigidbody2D rb;
 
     [SerializeField]
     float movementSpeed;
 
+    SpellCast spellCast;
+
     [SerializeField]
     HealthBar healthBar;
     Slider healthBarSlider;
+    void Awake() {
+        inputManager = GetComponent<InputManager>();
+        rb = GetComponent<Rigidbody2D>();
+        spellCast = GetComponent<SpellCast>();
+    }
     void Start() {
         currentHealth = maxHealth;
         healthBar.setMaxHealth(maxHealth);
@@ -37,6 +42,9 @@ public class Player : MonoBehaviour
         currentHealth = healthBarSlider.value;
         movement = inputManager.getMovement();
         playerController.Move(movement);
+        if(inputManager.isSpellCasted()) {
+            spellCast.fireBall();
+        }
     }
     public void setInvincibility(bool invincibility) {
         isInvincible = invincibility;
@@ -55,5 +63,8 @@ public class Player : MonoBehaviour
     }
     public bool getInvincibility() {
         return isInvincible;
+    }
+    public HealthBar getHealthBar() {
+        return healthBar;
     }
 }

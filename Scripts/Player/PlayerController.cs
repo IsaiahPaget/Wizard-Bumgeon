@@ -7,12 +7,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     Player player;
     // The rigid body component attached to this GameObject
-    [SerializeField]
     Rigidbody2D rb;
     // The direction of movement as a vector
     Vector2 movement;
     float movementSpeed;
-    
+    void Awake() {
+        rb = GetComponent<Rigidbody2D>();
+    }
     void Update() {
         movementSpeed = player.getMovementSpeed();
     }

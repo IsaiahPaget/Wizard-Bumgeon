@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour
 {
-    [SerializeField]
     Player player;
-
-    [SerializeField]
     AnimationManager animationManager;
+    void Awake() {
+        animationManager = GetComponent<AnimationManager>();
+        player = GetComponent<Player>();
+    }
     void Update() {
         switch (player.getMovement().y)
         {

@@ -45,15 +45,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: fireball_explosion
+  - name: fireBallExplosion
     clip: {fileID: 8300000, guid: a1219f7438c2489428d80011c0281715, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Spell_Cast_FireBall
     clip: {fileID: 8300000, guid: 034abb7d69e537645b03071914dfe0b2, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}

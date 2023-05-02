@@ -9,7 +9,6 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     float maxHealth;
 
-    [HideInInspector]
     float currentHealth;
 
     [SerializeField]
@@ -18,16 +17,18 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     float movementSpeed;
 
-    [SerializeField]
     Rigidbody2D rb;
     Slider healthBarSlider;
+    void Awake() {
+        rb = GetComponent<Rigidbody2D>();
+        healthBarSlider = healthBar.GetComponent<Slider>();
+    }
     void Start () {
         currentHealth = maxHealth;
         healthBar.setMaxHealth(maxHealth);
     }
     // Update is called once per frame
     void Update () {
-        healthBarSlider = healthBar.GetComponent<Slider>();
         currentHealth = healthBarSlider.value;
         if (currentHealth <= 0) {
             Destroy(gameObject);
@@ -41,5 +42,8 @@ public class Enemy : MonoBehaviour
     }
     public float getMovementSpeed() {
         return movementSpeed;
+    }
+    public HealthBar getHealthBar() {
+        return healthBar;
     }
 }

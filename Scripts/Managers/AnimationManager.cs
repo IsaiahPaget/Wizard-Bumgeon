@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class AnimationManager : MonoBehaviour
 {
-    [SerializeField]
     Animator animator;
-
+    void Awake() {
+        animator = GetComponent<Animator>();
+    }
     public void PlayAnimation(string animationName)
     {
         // Set all animations to false

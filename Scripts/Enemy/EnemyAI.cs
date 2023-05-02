@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField]
     Enemy enemy;
     Rigidbody2D PlayerRb;
     Rigidbody2D EnemyRb;
     float followDistance;
     float movementSpeed;
+    void Awake() {
+        enemy = GetComponent<Enemy>();
+    }
     void Start() {
         PlayerRb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
         EnemyRb = GetComponent<Rigidbody2D>();
