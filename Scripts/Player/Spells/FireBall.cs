@@ -18,7 +18,7 @@ public class FireBall : MonoBehaviour
     float destroyDelay = 1f;
     float lifeSpan = 5f;
     void Awake() {
-        FindAnyObjectByType<AudioManager>().Play("Spell_Cast_FireBall");
+        FindAnyObjectByType<AudioManager>().play("Spell_Cast_FireBall");
     }
     // Start is called before the first frame update
     void Start()
@@ -29,7 +29,7 @@ public class FireBall : MonoBehaviour
     // Triggered when the fireball collides with another collider
     void OnTriggerEnter2D (Collider2D hitInfo) {
         // Play the explosion sound effect
-        FindAnyObjectByType<AudioManager>().Play("fireBallExplosion");
+        FindAnyObjectByType<AudioManager>().play("fireBallExplosion");
         // Trigger the fireball collision animation
         animationManager.PlayAnimation("fireballCollided");
         // Stop the fireball movement

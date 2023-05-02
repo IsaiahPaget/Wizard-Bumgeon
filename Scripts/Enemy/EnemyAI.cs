@@ -9,6 +9,8 @@ public class EnemyAI : MonoBehaviour
     Rigidbody2D EnemyRb;
     float followDistance;
     float movementSpeed;
+    Vector2 lookDir;
+    float moveAngle;
     void Awake() {
         enemy = GetComponent<Enemy>();
     }
@@ -19,12 +21,12 @@ public class EnemyAI : MonoBehaviour
     void Update() {
         followDistance = enemy.getFollowDistance();
         movementSpeed = enemy.getMovementSpeed();
+        lookDir = (PlayerRb.position - EnemyRb.position).normalized;
     }
     void FixedUpdate()
     {
         if (Vector2.Distance(PlayerRb.position, EnemyRb.position) < followDistance) {
-        Vector2 lookDir = PlayerRb.position - EnemyRb.position;
-        EnemyRb.MovePosition(EnemyRb.position + lookDir * (movementSpeed/100));
+            EnemyRb.MovePosition(EnemyRb.position + lookDir * movementSpeed * Time.deltaTime);
         }
     }
 }

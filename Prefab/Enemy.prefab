@@ -103,7 +103,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 118efede9c9f2be4a8fb00e23a954a85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 936693413943349265}
 --- !u!1 &3457428334392381609
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,8 +255,7 @@ MonoBehaviour:
   healthBar: {fileID: 3909653679224012148}
   maxHealth: 10
   followDistance: 10
-  movementSpeed: 1
-  rb: {fileID: 982285536103166794}
+  movementSpeed: 5
 --- !u!114 &8238766427867857526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,7 +268,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5575a7d23e5bb5b49b44516618044d73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 1661675146900087221}
 --- !u!114 &77288630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,8 +280,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44495831bca2d18499f7fe6e88d43f78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 3909653679224012148}
-  enemy: {fileID: 1661675146900087221}
 --- !u!1 &4376511855842356979
 GameObject:
   m_ObjectHideFlags: 0

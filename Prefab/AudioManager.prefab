@@ -57,3 +57,9 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: dash_sound
+    clip: {fileID: 8300000, guid: 3597ca25f7a21d44f9cac092344264d7, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

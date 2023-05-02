@@ -19,9 +19,9 @@ public class PlayerController : MonoBehaviour
     }
     void FixedUpdate() {
         // Move the player's rigid body based on the input and the move speed
-        rb.MovePosition(rb.position + movement * movementSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + (movement).normalized * movementSpeed * Time.fixedDeltaTime);
         // Move the player sprite towards the position of the player's ghost using Lerp.
-        player.transform.position = Vector2.Lerp(player.transform.position , rb.position, (movementSpeed* 0.9f ) * Time.deltaTime);
+        player.transform.position = Vector2.Lerp(player.transform.position, rb.position, (movementSpeed* 0.9f ) * Time.deltaTime);
     }
 
     public void Move(Vector2 movementInput) {

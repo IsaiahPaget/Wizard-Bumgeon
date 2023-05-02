@@ -14,7 +14,6 @@ public class AudioManager : MonoBehaviour
         foreach (Sound s in sounds) {
             
             s.source = gameObject.AddComponent<AudioSource>();
-            
             // Set the clip, volume, pitch, and loop properties of the AudioSource to match the Sound object
             s.source.clip = s.clip;
             s.source.volume = s.volume;
@@ -24,7 +23,7 @@ public class AudioManager : MonoBehaviour
     }
 
     // Play a sound with the specified name
-    public void Play(string name)
+    public void play(string name)
     {
         // Find the Sound object in the sounds array with the specified name
         Sound s = Array.Find(sounds, sound => sound.name == name);
@@ -32,6 +31,8 @@ public class AudioManager : MonoBehaviour
         // If the Sound object is found, play the sound
         if (s != null) {
             s.source.Play();
+        } else {
+            Debug.Log("Sound " + name + " Not found");
         }
     }
 }

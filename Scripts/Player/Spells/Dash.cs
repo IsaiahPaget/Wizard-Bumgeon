@@ -18,6 +18,7 @@ public class Dash : MonoBehaviour
         player.setMovementSpeed(initialMoveSpeed);
     }
     public void dash() {
+        FindAnyObjectByType<AudioManager>().play("dash_sound");
         initialMoveSpeed = player.getMovementSpeed();
         player.setMovementSpeed(initialMoveSpeed * dashSpeed);
         Invoke("resetMovementSpeed", dashLength);
