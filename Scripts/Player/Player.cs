@@ -13,11 +13,14 @@ public class Player : MonoBehaviour
 
     [HideInInspector]
     float currentHealth;
-    bool isInvincible = false;
 
     [SerializeField]
     int invincibilityFrames;
-    
+    bool isInvincible = false;
+
+    [SerializeField]
+    int spellCoolDownFrames;
+    bool isInSpellCoolDown = false;
     Rigidbody2D rb;
 
     [SerializeField]
@@ -32,22 +35,36 @@ public class Player : MonoBehaviour
         inputManager = GetComponent<InputManager>();
         rb = GetComponent<Rigidbody2D>();
         spellCast = GetComponent<SpellCast>();
+        healthBarSlider = healthBar.GetComponent<Slider>();
     }
     void Start() {
         currentHealth = maxHealth;
         healthBar.setMaxHealth(maxHealth);
     }
     void Update() {
-        healthBarSlider = healthBar.GetComponent<Slider>();
         currentHealth = healthBarSlider.value;
         movement = inputManager.getMovement();
         playerController.Move(movement);
-        if(inputManager.isSpellCasted()) {
-            spellCast.fireBall();
+        if (!isInSpellCoolDown){
+            checkForSpellCasts();
         }
     }
-    public void setInvincibility(bool invincibility) {
-        isInvincible = invincibility;
+    void checkForSpellCasts() {
+        if(inputManager.isSpellCasted()) {
+            spellCast.fireBall();
+            spellCasted();
+        }
+        if (inputManager.isDashing()) {
+            spellCast.onDash();
+            spellCasted();
+        }
+    }
+    void spellCasted() {
+        setIsSpellCoolDown(true);
+        Invoke("setSpellCoolDownFalse", spellCoolDownFrames);
+    }
+    void setSpellCoolDownFalse() {
+        setIsSpellCoolDown(false);
     }
     public float getCurrentHealth() {
         return currentHealth;
@@ -66,5 +83,22 @@ public class Player : MonoBehaviour
     }
     public HealthBar getHealthBar() {
         return healthBar;
+    }
+    public int getSpellCoolDownFrames() {
+        return spellCoolDownFrames;
+    }
+    public bool getIsInSpellCoolDown() {
+        return isInSpellCoolDown;
+    }
+
+
+    public void setInvincibility(bool invincibility) {
+        isInvincible = invincibility;
+    }
+    public void setIsSpellCoolDown(bool isSpellCoolDown) {
+        isInSpellCoolDown = isSpellCoolDown;
+    }
+    public void setMovementSpeed(float speed) {
+        movementSpeed = speed;
     }
 }

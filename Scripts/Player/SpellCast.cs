@@ -12,7 +12,10 @@ public class SpellCast : MonoBehaviour
     InputManager inputManager;
 
     [SerializeField]
-    FireBall fireball;
+    FireBall fireBallSpell;
+
+    [SerializeField]
+    Dash dashSpell;
     Vector3 mousePosition;
     // The direction in which the fireball will be shot
     Vector2 shootDirection;
@@ -40,6 +43,9 @@ public class SpellCast : MonoBehaviour
 
     public void fireBall()
     {   
-        fireball.shoot(FirePoint.position, SpellRotation);
+        fireBallSpell.shoot(FirePoint.position, SpellRotation);
+    }
+    public void onDash() {
+        dashSpell.dash();
     }
 }

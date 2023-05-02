@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 1132325211}
   - component: {fileID: 1132325212}
   - component: {fileID: 1132325214}
+  - component: {fileID: 1866568991}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -212,6 +213,7 @@ MonoBehaviour:
   playerController: {fileID: 0}
   maxHealth: 10
   invincibilityFrames: 1
+  spellCoolDownFrames: 1
   movementSpeed: 5
   healthBar: {fileID: 96648001}
 --- !u!114 &1132325210
@@ -262,7 +264,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8af1a64821b4a1d4a974b2ee59dd125a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireball: {fileID: 6422653205022070308, guid: 8ee0253e61840dd44aa3fb44252b361a, type: 3}
+  fireBallSpell: {fileID: 6422653205022070308, guid: 8ee0253e61840dd44aa3fb44252b361a, type: 3}
+  dashSpell: {fileID: 1866568991}
+--- !u!114 &1866568991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610785176388895599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aad1c69191da9f47a74035e75a9b6da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 3
+  dashLength: 0.5
 --- !u!1 &1610785176724024142
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,6 +485,10 @@ PrefabInstance:
     - target: {fileID: 2241081286300218680, guid: 4d79741dc006a664b818c51649b8c5e4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3036670819330266764, guid: 4d79741dc006a664b818c51649b8c5e4, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3266028801742496065, guid: 4d79741dc006a664b818c51649b8c5e4, type: 3}
       propertyPath: m_AnchorMax.x
