@@ -5,6 +5,9 @@ using UnityEngine;
 public class Dash : MonoBehaviour
 {
     [SerializeField]
+    Particle particle;
+
+    [SerializeField]
     float dashSpeed;
 
     [SerializeField]
@@ -21,6 +24,7 @@ public class Dash : MonoBehaviour
         FindAnyObjectByType<AudioManager>().play("dash_sound");
         initialMoveSpeed = player.getMovementSpeed();
         player.setMovementSpeed(initialMoveSpeed * dashSpeed);
+        // particle.playParticle(player.transform.position);
         Invoke("resetMovementSpeed", dashLength);
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     InputManager inputManager;
+
     [SerializeField]
     PlayerController playerController;
     Vector2 movement;
@@ -90,7 +91,6 @@ public class Player : MonoBehaviour
     public bool getIsInSpellCoolDown() {
         return isInSpellCoolDown;
     }
-
 
     public void setInvincibility(bool invincibility) {
         isInvincible = invincibility;

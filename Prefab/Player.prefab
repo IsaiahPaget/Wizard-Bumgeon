@@ -162,9 +162,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.009198487, y: -0.022996128}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.49540085
 --- !u!95 &1610785176388895592
 Animator:
   serializedVersion: 5
@@ -278,6 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aad1c69191da9f47a74035e75a9b6da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particle: {fileID: -4076737524896245165, guid: 21b150b985e6d854095a0f511f2d7dad, type: 3}
   dashSpeed: 3
   dashLength: 0.5
 --- !u!1 &1610785176724024142

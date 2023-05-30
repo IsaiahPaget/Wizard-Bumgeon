@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {   
+
     [SerializeField]
     HealthBar healthBar;
 
