@@ -4,19 +4,18 @@ using UnityEngine.UI;
 public class Enemy : MonoBehaviour
 {   
 
-    [SerializeField]
-    HealthBar healthBar;
+    public HealthBar healthBar;
 
     [SerializeField]
     float maxHealth;
 
-    float currentHealth;
+    public float currentHealth;
+    
+    [SerializeField]
+    public float followDistance;
 
     [SerializeField]
-    float followDistance;
-
-    [SerializeField]
-    float movementSpeed;
+    public float movementSpeed;
 
     Rigidbody2D rb;
     Slider healthBarSlider;
@@ -34,17 +33,5 @@ public class Enemy : MonoBehaviour
         if (currentHealth <= 0) {
             Destroy(gameObject);
         }
-    }
-    public float getFollowDistance() {
-        return followDistance;
-    }
-    public float getCurrentHealth() {
-        return currentHealth;
-    }
-    public float getMovementSpeed() {
-        return movementSpeed;
-    }
-    public HealthBar getHealthBar() {
-        return healthBar;
     }
 }

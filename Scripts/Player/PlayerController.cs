@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
     void Update() {
-        movementSpeed = player.getMovementSpeed();
+        movementSpeed = player.movementSpeed;
     }
     void FixedUpdate() {
         // Move the player's rigid body based on the input and the move speed

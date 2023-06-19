@@ -19,8 +19,8 @@ public class EnemyAI : MonoBehaviour
         EnemyRb = GetComponent<Rigidbody2D>();
     }
     void Update() {
-        followDistance = enemy.getFollowDistance();
-        movementSpeed = enemy.getMovementSpeed();
+        followDistance = enemy.followDistance;
+        movementSpeed = enemy.movementSpeed;
         lookDir = (PlayerRb.position - EnemyRb.position).normalized;
     }
     void FixedUpdate()

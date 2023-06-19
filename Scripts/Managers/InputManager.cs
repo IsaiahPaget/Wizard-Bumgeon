@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    Vector2 movement;
-    bool spellCasted;
-    bool dashing;
+    public Vector2 movement;
+    public bool spellCasted;
+    public bool dashing;
     // Update is called once per frame
     void Update()
     {
@@ -25,13 +25,8 @@ public class InputManager : MonoBehaviour
             dashing = false;
         }
     }
-    public Vector2 getMovement() {
-        return movement;
-    }
-    public bool isSpellCasted() {
-        return spellCasted;
-    }
-    public bool isDashing() {
-        return dashing;
-    }
 }
+
+
+
+

@@ -10,21 +10,21 @@ public class PlayerCollision : MonoBehaviour
 
     void Awake() {
         player = GetComponent<Player>();
-        healthBar = player.getHealthBar();
+        healthBar = player.healthBar;
     }
     void OnCollisionStay2D(Collision2D collision)
     {
-        if (player.getInvincibility() == false) {
+        if (player.isInvincible == false) {
             enemy = collision.gameObject.GetComponent<Enemy>();
             if (enemy != null)
             {
-                healthBar.SetHealth(player.getCurrentHealth() - 1f);
-                player.setInvincibility(true);
-                Invoke("setIsInvincible", player.getInvincibilityFrames());
+                healthBar.SetHealth(player.currentHealth - 1f);
+                player.isInvincible = true;
+                Invoke("setIsInvincibleFalse", player.invincibilityFrames);
             }
         }
     }
-    void setIsInvincible() {
-        player.setInvincibility(false);
+    void setIsInvincibleFalse() {
+        player.isInvincible = false; 
     }
 }

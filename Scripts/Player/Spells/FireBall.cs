@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class FireBall : MonoBehaviour
 {
-    [SerializeField]
-    float speed;
+    public float speed;
 
     [SerializeField]
     AnimationManager animationManager;
 
-    [SerializeField]
-    float damage;
+    public float damage;
 
     [SerializeField]
     Rigidbody2D rb;
@@ -42,12 +40,6 @@ public class FireBall : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public float getSpeed() {
-        return speed;
-    }
-    public float getDamage() {
-        return damage;
-    }
     public Rigidbody2D getFireballRigidBody2D() {
         return rb;
     }

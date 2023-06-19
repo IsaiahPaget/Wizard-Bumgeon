@@ -8,12 +8,12 @@ public class EnemyCollision : MonoBehaviour {
     FireBall fireBall;
     void Awake() {
         enemy = GetComponent<Enemy>();
-        healthBar = enemy.getHealthBar();
+        healthBar = enemy.healthBar;
     }
     void OnTriggerEnter2D(Collider2D collision) {
         fireBall = collision.gameObject.GetComponent<FireBall>();
         if (fireBall != null) {
-            healthBar.SetHealth(enemy.getCurrentHealth() - fireBall.getDamage());
+            healthBar.SetHealth(enemy.currentHealth - fireBall.damage);
         }
     }
 }

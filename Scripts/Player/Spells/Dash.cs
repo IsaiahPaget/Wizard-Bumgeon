@@ -18,12 +18,12 @@ public class Dash : MonoBehaviour
         player = GetComponent<Player>();
     }
     void resetMovementSpeed() {
-        player.setMovementSpeed(initialMoveSpeed);
+        player.movementSpeed = initialMoveSpeed;
     }
     public void dash() {
         FindAnyObjectByType<AudioManager>().play("dash_sound");
-        initialMoveSpeed = player.getMovementSpeed();
-        player.setMovementSpeed(initialMoveSpeed * dashSpeed);
+        initialMoveSpeed = player.movementSpeed;
+        player.movementSpeed *= dashSpeed;
         // particle.playParticle(player.transform.position);
         Invoke("resetMovementSpeed", dashLength);
     }

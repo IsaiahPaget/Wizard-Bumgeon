@@ -11,7 +11,7 @@ public class PlayerAnimator : MonoBehaviour
         player = GetComponent<Player>();
     }
     void Update() {
-        switch (player.getMovement().y)
+        switch (player.movement.y)
         {
             case 1:
                 animationManager.PlayAnimation("movingUp");
@@ -20,7 +20,7 @@ public class PlayerAnimator : MonoBehaviour
                 animationManager.PlayAnimation("movingDown");
                 break;
             default:
-                switch (player.getMovement().x)
+                switch (player.movement.x)
                     {
                         case 1:
                             animationManager.PlayAnimation("movingRight");
